@@ -34,7 +34,7 @@ const Hero = () => {
 
   // Countdown Timer Logic
   useEffect(() => {
-    const targetDate = new Date("2024-12-18T00:00:00");
+    const targetDate = new Date("2026-12-18T00:00:00");
     const timer = setInterval(() => {
       const now = new Date().getTime();
       const difference = targetDate.getTime() - now;
@@ -42,7 +42,9 @@ const Hero = () => {
       if (difference > 0) {
         setTimeLeft({
           days: Math.floor(difference / (1000 * 60 * 60 * 24)),
-          hours: Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)),
+          hours: Math.floor(
+            (difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
+          ),
           minutes: Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60)),
           seconds: Math.floor((difference % (1000 * 60)) / 1000),
         });
@@ -95,7 +97,7 @@ const Hero = () => {
               {/* Title */}
               <div className="mb-4">
                 <h1 className="text-xl md:text-3xl font-bold leading-tight mb-1 text-white">
-                  2<sup className="text-sm md:text-lg">nd</sup> International
+                  3<sup className="text-sm md:text-lg">rd</sup> International
                   Conference on Recent Trends in
                 </h1>
                 <h2 className="text-lg md:text-2xl font-bold text-blue-400 mb-1">
@@ -105,18 +107,22 @@ const Hero = () => {
                   Computing and Communications Systems
                 </h2>
                 <h3 className="text-base md:text-xl font-bold text-gray-200">
-                  (ICMACC 2024)
+                  (ICMACC 2026)
                 </h3>
               </div>
 
               {/* Date and Location */}
               <div className="mb-4">
                 <p className="text-sm md:text-lg font-semibold text-gray-200">
-                  <span className="text-red-400">18<sup>th</sup></span>
+                  <span className="text-red-400">
+                    18<sup>th</sup>
+                  </span>
                   <span className="mx-1">-</span>
-                  <span className="text-red-400">21<sup>st</sup></span>
+                  <span className="text-red-400">
+                    21<sup>st</sup>
+                  </span>
                   <span className="ml-1 text-red-400">
-                    December 2024, Hyderabad
+                    December 2026, Hyderabad
                   </span>
                 </p>
               </div>
@@ -150,7 +156,6 @@ const Hero = () => {
       </section>
 
       {/* Flowing Menu Outside Hero */}
-
     </>
   );
 };

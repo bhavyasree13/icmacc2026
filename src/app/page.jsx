@@ -9,7 +9,7 @@ export default function Home() {
   return (
     <main>
       <Hero />
-      <FlowingMenu />
+      {/* <FlowingMenu /> */}
       <Sponsers />
       <About />
       <Tracks />
