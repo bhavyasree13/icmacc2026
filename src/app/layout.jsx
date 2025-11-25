@@ -1,6 +1,7 @@
 import "./globals.css";
 import Navbar from "../components/Navbar/Navbar";
 import ClickSpark from "../blocks/Animations/ClickSpark/ClickSpark";
+import Footer from "@/components/Footer/Footer";
 
 export const metadata = {
   title: "ICMACC | 2026",
@@ -15,6 +16,7 @@ export default function RootLayout({ children }) {
 
         <Navbar />
         {children}
+        <Footer />
       </body>
     </html>
   );

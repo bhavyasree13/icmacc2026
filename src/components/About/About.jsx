@@ -260,7 +260,7 @@ export default function ConferenceScroll() {
                 Telangana and Andhra Pradesh (excluding geography of Vizag Bay
                 section) are members of the IEEE Hyderabad Section.
                 <a
-                  href="https://ieeehyderabad.org"
+                  href="https://ieeehyd.org/"
                   className="inline-block ml-2 px-3 py-1 bg-gradient-to-r from-orange-500 to-pink-500 text-white text-sm rounded-full hover:from-orange-600 hover:to-pink-600 transition-all duration-300 hover:scale-105 hover:shadow-md"
                   target="_blank"
                   rel="noopener noreferrer"
@@ -302,7 +302,7 @@ export default function ConferenceScroll() {
                 this recognition!—thus imparting quality education to over 6000
                 students every year.
                 <a
-                  href="https://www.vnr.ac.in"
+                  href="https://vnrvjiet.ac.in/"
                   className="inline-block ml-2 px-3 py-1 bg-gradient-to-r from-indigo-500 to-purple-500 text-white text-sm rounded-full hover:from-indigo-600 hover:to-purple-600 transition-all duration-300 hover:scale-105 hover:shadow-md"
                   target="_blank"
                   rel="noopener noreferrer"
