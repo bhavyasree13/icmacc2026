@@ -3,7 +3,7 @@ import Navbar from "../components/Navbar/Navbar";
 import ClickSpark from "../blocks/Animations/ClickSpark/ClickSpark";
 
 export const metadata = {
-  title: "MyApp",
+  title: "ICMACC | 2026",
   description: "Next.js App",
 };
 

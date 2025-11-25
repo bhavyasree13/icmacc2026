@@ -1,82 +1,4 @@
-// 'use client';
 
-// import { useRef, useEffect, useState } from "react";
-
-// // Card component
-// const Card = ({ children, bg = "white" }) => {
-//   const ref = useRef(null);
-//   const [visible, setVisible] = useState(false);
-
-//   useEffect(() => {
-//     const observer = new IntersectionObserver(
-//       ([entry]) => setVisible(entry.isIntersecting),
-//       { threshold: 0.3 }
-//     );
-
-//     if (ref.current) observer.observe(ref.current);
-//     return () => { if (ref.current) observer.unobserve(ref.current); };
-//   }, []);
-
-//   return (
-//     <section
-//       ref={ref}
-//       className={`mx-4 md:mx-16 my-6 p-6 md:p-12 rounded-xl border border-gray-200 shadow-sm transition-all duration-700 transform
-//         ${visible ? "opacity-100 scale-100" : "opacity-0 scale-95"}
-//         hover:shadow-md hover:scale-[1.02]
-//         ${bg === "gray" ? "bg-gray-50" : "bg-white"}`}
-//     >
-//       {children}
-//     </section>
-//   );
-// };
-
-// export default function ConferenceScroll() {
-//   return (
-//     <div className="w-screen min-h-screen bg-gray-100 font-sans p-4">
-
-//       {/* Theme */}
-//       <Card>
-//         <h2 className="text-2xl md:text-3xl font-serif font-semibold mb-4 text-center text-gray-800">
-//           Theme: Exploration and Blend of Emerging Technologies for Future Innovation
-//         </h2>
-//         <p className="text-sm md:text-base leading-relaxed text-gray-700">
-//           The 2nd International Conference on recent trends in Microelectronics, Automation, Computing and Communications Systems (ICMACC-24) is focused on research and emphasizes on the latest technological advancements. The conference aims to provide outstanding opportunities for both academic and industrial communities to address new trends and challenges and emerging technologies on the topics relevant to today’s fast-moving areas in the fields of Microelectronics, Automation, Computing and Communications Systems, and so on. The conference comprises keynote addresses, invited talks, refereed paper and poster presentations, pre-conference tutorials, product exhibition, and panel discussion. The vision of the ICMACC-24 is to promote brainstorming and collaboration so that critical issues pertaining to individual research activities can be addressed and ideas can be exchanged through extensive discussions. The conference focuses on specific engineering streams, allowing the speakers to dwell deep into the very next day. The conference is technically co-sponsored by IEEE Hyderabad Section and is approved by IEEE with conference ID: #62921.
-//         </p>
-//       </Card>
-
-//       {/* Objectives */}
-//       <Card bg="gray">
-//         <h2 className="text-2xl md:text-3xl font-serif font-semibold mb-4 text-center text-gray-800">Objectives</h2>
-//         <ul className="list-disc list-inside space-y-2 text-sm md:text-base leading-relaxed text-gray-700 text-left">
-//           <li>To address practical challenges encountered and discuss innovative solutions adopted in allied fields of electronics, computing, and automation.</li>
-//           <li>To bring Academicians, Researchers and Industry Experts across the globe to submit and present basic and applied work in the wide domains of Microelectronics, Automation, Computing and Communications Systems and allied areas of study.</li>
-//           <li>To create a platform to exchange knowledge, research results, innovations, and developments in the allied fields of electronics, computing, and automation.</li>
-//           <li>To provide an opportunity for students, researchers, and engineers to interact with the experts on technical matters, research methodologies, career advice, vision into the future, and preparedness for better societal impact through technological interventions.</li>
-//           <li>To deliver and discuss the latest developments in VLSI, IoT, Communication, Automation, Signal Processing and Biomedical Engineering applications by eminent personalities from premier institutes and organizations.</li>
-//         </ul>
-//       </Card>
-
-//       {/* About IEEE */}
-//       <Card>
-//         <h2 className="text-2xl md:text-3xl font-serif font-semibold mb-4 text-center text-gray-800">About IEEE Hyderabad Section</h2>
-//         <p className="text-sm md:text-base leading-relaxed text-gray-700">
-//           The IEEE Hyderabad Section is one of the most active sections of IEEE in India. IEEE was formally introduced in Hyderabad, in June 1981, when a group of engineers in Hyderabad decided to form an IEEE sub-section. This sub-section was rapidly elevated to a full section, in 1984 (the year of IEEE Centenary celebrations). All IEEE members residing in the Indian states of Telangana and Andhra Pradesh (excluding geography of Vizag Bay section) are members of the IEEE Hyderabad Section.
-//           <a href="https://ieeehyderabad.org" className="text-blue-600 underline ml-1" target="_blank" rel="noopener noreferrer">More Info</a>
-//         </p>
-//       </Card>
-
-//       {/* About VNRVJIET */}
-//       <Card bg="gray">
-//         <h2 className="text-2xl md:text-3xl font-serif font-semibold mb-4 text-center text-gray-800">About VNRVJIET</h2>
-//         <p className="text-sm md:text-base leading-relaxed text-gray-700">
-//           Vallurupalli Nageswara Rao Vignana Jyothi Institute of Engineering and Technology (VNRVJIET) was established by the Vignana Jyothi Society, a not-for-profit organization, in the year 1995. Education determines a society’s growth and development. With a motto to provide value-based higher education on par with international standards, the Philosophy of Vignana Jyothi unravels education as a process of "Presencing" that provides, both individually and collectively, to one’s deepest capacity to sense and experience the knowledge. This process, along with a conscientious will to put Success and Happiness first leading to a better future has put VNRVJIET at the forefront of academic excellence. The Institute is approved by AICTE and is affiliated to JNTU-H. It offers 14 UG programmes, 14 PG programmes, and Ph.D. programmes under NDF scheme of AICTE—the only Institute in the Telangana State to get this recognition!—thus imparting quality education to over 6000 students every year.
-//           <a href="https://www.vnr.ac.in" className="text-blue-600 underline ml-1" target="_blank" rel="noopener noreferrer">More Info</a>
-//         </p>
-//       </Card>
-
-//     </div>
-//   );
-// }
 "use client";
 
 import { useRef, useEffect, useState } from "react";
@@ -259,7 +181,7 @@ export default function ConferenceScroll() {
         <Card animationType="fadeScale" delay={200}>
           <AnimatedText>
             <h2 className="text-3xl md:text-4xl font-serif font-bold mb-6 text-center bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 bg-clip-text text-transparent leading-tight">
-              Theme: Exploration and Blend of Emerging Technologies for Future
+              Theme: Fusion of Deep and Emerging Technologies: Shaping the Future Frontiers of Innovation
               Innovation
             </h2>
           </AnimatedText>
