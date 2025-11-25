@@ -3,7 +3,7 @@ import FlowingMenu from "@/components/FlowingMenu/FlowingMenu";
 import Sponsers from "@/components/Sponsers/Sponsers";
 import About from "@/components/About/About";
 import Tracks from "@/components/Tracks/Tracks";
-import Footer from "@/components/Footer/Footer";
+
 
 export default function Home() {
   return (
@@ -13,7 +13,7 @@ export default function Home() {
       {/*<Sponsers />*/}
       <About />
       <Tracks />
-      <Footer />
+  
     </main>
   );
 }
