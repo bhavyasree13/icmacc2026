@@ -15,7 +15,7 @@ const Navbar = () => {
     { name: "Committee", hasDropdown: true },
     { name: "Inspiring Visionaries", hasDropdown: false },
     { name: "Sponsorship", hasDropdown: false },
-    { name: "ICMACC 2024", hasDropdown: true },
+    { name: "ICMACC 2026", hasDropdown: true },
   ];
 
   return (

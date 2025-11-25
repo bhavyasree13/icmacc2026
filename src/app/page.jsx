@@ -10,7 +10,7 @@ export default function Home() {
     <main>
       <Hero />
       {/* <FlowingMenu /> */}
-      <Sponsers />
+      {/*<Sponsers />*/}
       <About />
       <Tracks />
       <Footer />
