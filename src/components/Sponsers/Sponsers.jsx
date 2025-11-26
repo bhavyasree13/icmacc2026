@@ -1,7 +1,5 @@
 'use client';
 import { motion } from 'framer-motion';
-import LogoLoop from '../../blocks/Animations/LogoLoop/LogoLoop';
-import StarBorder from '@/blocks/Animations/StarBorder/StarBorder';
 
 const imageLogos = [
   { src: "/s1.png", alt: "Logo 1", href: "#" },
