@@ -182,7 +182,7 @@ export default function ConferenceScroll() {
           <AnimatedText>
             <h2 className="text-3xl md:text-4xl font-serif font-bold mb-6 text-center bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 bg-clip-text text-transparent leading-tight">
               Theme: Fusion of Deep and Emerging Technologies: Shaping the Future Frontiers of Innovation
-              Innovation
+    
             </h2>
           </AnimatedText>
           <AnimatedText delay={400}>
