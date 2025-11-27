@@ -6,7 +6,7 @@
     "dev": "next dev --turbopack",
     "build": "next build --turbopack",
     "start": "next start",
-    "deploy": "git checkout main && next build && firebase deploy --only hosting"
+    "deploy": "git checkout main && git pull origin main && next build && firebase deploy --only hosting"
   },
   "dependencies": {
     "@studio-freight/lenis": "^1.0.42",

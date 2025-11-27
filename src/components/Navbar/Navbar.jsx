@@ -15,18 +15,19 @@ const Navbar = () => {
     { name: "Committee", hasDropdown: true },
     { name: "Inspiring Visionaries", hasDropdown: false },
     { name: "Sponsorship", hasDropdown: false },
+    { name: "Acknowledgement", hasDropdown: false, link: "/acknowledgement" },
     { name: "ICMACC 2026", hasDropdown: true },
   ];
 
   return (
     <nav className="bg-white shadow-md relative z-50 w-full">
       <div className="w-full px-0">
-
         {/* Desktop Navbar */}
         <div className="hidden lg:flex items-center justify-between h-20 w-full px-6">
-
           {/* Left Logo */}
-          <div className="flex-shrink-0 mr-4"> {/* Reduced space between logo and links */}
+          <div className="flex-shrink-0 mr-4">
+            {" "}
+            {/* Reduced space between logo and links */}
             <Link href="/" className="block">
               <Image
                 src="/logo.png"
@@ -41,15 +42,20 @@ const Navbar = () => {
 
           {/* Navigation Links */}
           <div className="flex-1 flex justify-center">
-            <div className="flex items-center space-x-10"> {/* Increased space between links */}
+            <div className="flex items-center space-x-10">
+              {" "}
+              {/* Increased space between links */}
               {navItems.map((item, index) => (
                 <div key={index} className="relative group">
-                  <button className="flex items-center space-x-1 text-gray-700 hover:text-blue-600 font-medium transition-colors duration-300">
+                  <Link
+                    className="flex items-center space-x-1 text-gray-700 hover:text-blue-600 font-medium transition-colors duration-300"
+                    href={item.link || "/"}
+                  >
                     <span className="relative after:content-[''] after:absolute after:left-0 after:bottom-[-4px] after:w-0 after:h-[2px] after:bg-blue-600 after:transition-all after:duration-300 group-hover:after:w-full">
                       {item.name}
                     </span>
                     {item.hasDropdown && <ChevronDown className="w-4 h-4" />}
-                  </button>
+                  </Link>
 
                   {/* Dropdown */}
                   {item.hasDropdown && (
@@ -76,7 +82,9 @@ const Navbar = () => {
           </div>
 
           {/* Right Logo */}
-          <div className="flex-shrink-0 ml-4"> {/* Keeps right logo aligned properly */}
+          <div className="flex-shrink-0 ml-4">
+            {" "}
+            {/* Keeps right logo aligned properly */}
             <Image
               src="/logoright.png"
               alt="Right Logo"
@@ -107,7 +115,11 @@ const Navbar = () => {
             onClick={() => setIsMenuOpen(!isMenuOpen)}
             className="p-2 rounded-md text-gray-700 hover:text-blue-600 focus:outline-none"
           >
-            {isMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+            {isMenuOpen ? (
+              <X className="w-6 h-6" />
+            ) : (
+              <Menu className="w-6 h-6" />
+            )}
           </button>
         </div>
 
@@ -142,4 +154,3 @@ const Navbar = () => {
 };
 
 export default Navbar;
-    
