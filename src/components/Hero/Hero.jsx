@@ -24,7 +24,7 @@ const Hero = () => {
 
   // Countdown Timer Logic
   useEffect(() => {
-    const targetDate = new Date("2026-12-18T00:00:00");
+    const targetDate = new Date("2026-11-05T00:00:00");
     const timer = setInterval(() => {
       const now = new Date().getTime();
       const difference = targetDate.getTime() - now;
@@ -96,14 +96,14 @@ const Hero = () => {
             <div className="mb-4">
               <p className="text-sm md:text-lg font-semibold text-gray-200">
                 <span className="text-red-400">
-                  18<sup>th</sup>
+                  5<sup>th</sup>
                 </span>
                 <span className="mx-1">-</span>
                 <span className="text-red-400">
-                  21<sup>st</sup>
+                  7<sup>th</sup>
                 </span>
                 <span className="ml-1 text-red-400">
-                  December 2026, Hyderabad
+                  November 2026, Hyderabad
                 </span>
               </p>
             </div>
