@@ -4,20 +4,21 @@ import React, { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { ChevronDown, Menu, X } from "lucide-react";
+import NavbarItem from "./NavbarItem";
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const navItems = [
-    { name: "Home", hasDropdown: true },
-    { name: "Hyderabad", hasDropdown: true },
-    { name: "Call for Papers", hasDropdown: false },
+    {name:"Home",link:"/",children:[{name:"Option 1",link:"/#option1"},{name:"Option 2", link: "/#option2"},],},
+    {name:"Hyderabad",link:"/hyderabad",children:[{name:"Option 1",link:"/#option1"},{name:"Option 2", link: "/#option2"},],},
+    {name:"Call for paper",link:"/callforpaper",children:[],},
     // { name: "Agenda", hasDropdown: true },
-    { name: "Committee", hasDropdown: true },
+    {name:"Committee",link:"/committee",children:[{name:"Option 1",link:"/#option1"},{name:"Option 2", link: "/#option2"},],},
     // { name: "Inspiring Visionaries", hasDropdown: false },
-    { name: "Sponsorship", hasDropdown: false },
-    { name: "Acknowledgement", hasDropdown: false, link: "/acknowledgement" },
-    { name: "ICMACC 2026", hasDropdown: true },
+    { name: "Sponsorship",link:"/sponsorship",children:[],},
+    { name: "Acknowledgment",link:"/Acknowledgment",children:[],},
+    { name: "ICMACC 2026",link:"/icmacc",children:[{name:"Option 1",link:"/#option1"},{name:"Option 2", link: "/#option2"},],},
   ];
 
   return (
@@ -43,41 +44,9 @@ const Navbar = () => {
 
           {/* Navigation Links */}
           <div className="flex-1 flex justify-center">
-            <div className="flex items-center space-x-10">
-              {" "}
-              {/* Increased space between links */}
-              {navItems.map((item, index) => (
-                <div key={index} className="relative group">
-                  <Link
-                    className="flex items-center space-x-1 text-gray-700 hover:text-blue-600 font-medium transition-colors duration-300"
-                    href={item.link || "/"}
-                  >
-                    <span className="relative after:content-[''] after:absolute after:left-0 after:bottom-[-4px] after:w-0 after:h-[2px] after:bg-blue-600 after:transition-all after:duration-300 group-hover:after:w-full">
-                      {item.name}
-                    </span>
-                    {item.hasDropdown && <ChevronDown className="w-4 h-4" />}
-                  </Link>
-
-                  {/* Dropdown */}
-                  {item.hasDropdown && (
-                    <div className="absolute top-full left-0 mt-3 w-52 bg-white shadow-lg rounded-md opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300">
-                      <div className="py-2">
-                        <Link
-                          href="#"
-                          className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors duration-200"
-                        >
-                          Option 1
-                        </Link>
-                        <Link
-                          href="#"
-                          className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors duration-200"
-                        >
-                          Option 2
-                        </Link>
-                      </div>
-                    </div>
-                  )}
-                </div>
+             <div className="flex items-end space-x-8">
+              {navItems.map((item) => (
+                <NavbarItem key={item.name} item={item} />
               ))}
             </div>
           </div>
@@ -127,15 +96,48 @@ const Navbar = () => {
         {/* Mobile Navigation */}
         {isMenuOpen && (
           <div className="lg:hidden border-t border-gray-200 py-4 space-y-2 px-4">
-            {navItems.map((item, index) => (
-              <div key={index} className="py-2">
-                <button className="flex items-center justify-between w-full text-left text-gray-700 hover:text-blue-600 font-medium">
-                  <span>{item.name}</span>
-                  {item.hasDropdown && <ChevronDown className="w-4 h-4" />}
-                </button>
+            {navItems.map((item) => (
+              <div key={item.name}>
+                {item.children && item.children.length > 0 ? (
+                  <div className="space-y-1">
+                    <button
+                      className="w-full flex justify-between items-center text-gray-700 hover:text-blue-600 py-2 font-medium"
+                      onClick={() =>
+                        setIsMenuOpen((prev) => ({
+                          ...prev,
+                          [item.name]: !prev[item.name],
+                        }))
+                      }
+                    >
+                      {item.name}
+                      <ChevronDown
+                        className={`ml-1 h-4 w-4 transition-transform ${
+                          isMenuOpen[item.name] ? "rotate-180" : ""
+                        }`}
+                      />
+                    </button>
+                    {isMenuOpen[item.name] && (
+                      <div className="pl-4 space-y-1">
+                        {item.children.map((child) => (
+                          <Link
+                            key={child.name}
+                            href={child.link}
+                            className="block text-gray-700 hover:text-blue-600 py-1"
+                          >
+                            {child.name}
+                          </Link>
+                        ))}
+                      </div>
+                    )}
+                  </div>
+                ) : (
+                  <Link
+                    href={item.link} className="block text-gray-700 hover:text-blue-600 py-2 font-medium">
+                    {item.name}
+                  </Link>
+                )}
               </div>
             ))}
-
             {/* Right Logo in Mobile Menu */}
             <div className="flex justify-center mt-4">
               <Image
