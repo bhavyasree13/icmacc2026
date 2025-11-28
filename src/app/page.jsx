@@ -4,7 +4,6 @@ import Sponsers from "@/components/Sponsers/Sponsers";
 import About from "@/components/About/About";
 import Tracks from "@/components/Tracks/Tracks";
 
-
 export default function Home() {
   return (
     <main>
@@ -13,7 +12,6 @@ export default function Home() {
       {/*<Sponsers />*/}
       <About />
       <Tracks />
-  
     </main>
   );
 }

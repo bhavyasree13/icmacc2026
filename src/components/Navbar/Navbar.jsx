@@ -10,15 +10,37 @@ const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const navItems = [
-    {name:"Home",link:"/",children:[{name:"Option 1",link:"/#option1"},{name:"Option 2", link: "/#option2"},],},
-    {name:"Hyderabad",link:"/hyderabad",children:[{name:"Option 1",link:"/#option1"},{name:"Option 2", link: "/#option2"},],},
-    {name:"Call for paper",link:"/callforpaper",children:[],},
+    {
+      name: "Home",
+      link: "/",
+    },
+    {
+      name: "Hyderabad",
+      link: "/hyderabad",
+      children: [
+        { name: "Option 1", link: "/#option1" },
+        { name: "Option 2", link: "/#option2" },
+      ],
+    },
+    { name: "Call for paper", link: "/callforpaper", children: [] },
     // { name: "Agenda", hasDropdown: true },
-    {name:"Committee",link:"/committee",children:[{name:"Option 1",link:"/#option1"},{name:"Option 2", link: "/#option2"},],},
+    {
+      name: "Committee",
+      children: [
+        { name: "Option 1", link: "/#option1" },
+        { name: "Option 2", link: "/#option2" },
+      ],
+    },
     // { name: "Inspiring Visionaries", hasDropdown: false },
-    { name: "Sponsorship",link:"/sponsorship",children:[],},
-    { name: "Acknowledgment",link:"/Acknowledgment",children:[],},
-    { name: "ICMACC 2026",link:"/icmacc",children:[{name:"Option 1",link:"/#option1"},{name:"Option 2", link: "/#option2"},],},
+    { name: "Sponsorship", link: "/sponsorship", children: [] },
+    { name: "Acknowledgment", link: "/acknowledgement", children: [] },
+    {
+      name: "ICMACC",
+      children: [
+        { name: "ICMACC 2024", link: "https://icmacc-2024.web.app/" },
+        { name: "ICMACC 2022", link: "http://icmacc2022.ieee-icmacc.org/" },
+      ],
+    },
   ];
 
   return (
@@ -44,7 +66,7 @@ const Navbar = () => {
 
           {/* Navigation Links */}
           <div className="flex-1 flex justify-center">
-             <div className="flex items-end space-x-8">
+            <div className="flex items-end space-x-8">
               {navItems.map((item) => (
                 <NavbarItem key={item.name} item={item} />
               ))}
@@ -132,7 +154,9 @@ const Navbar = () => {
                   </div>
                 ) : (
                   <Link
-                    href={item.link} className="block text-gray-700 hover:text-blue-600 py-2 font-medium">
+                    href={item.link}
+                    className="block text-gray-700 hover:text-blue-600 py-2 font-medium"
+                  >
                     {item.name}
                   </Link>
                 )}
