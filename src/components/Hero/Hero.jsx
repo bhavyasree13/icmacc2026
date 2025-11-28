@@ -5,7 +5,7 @@ import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
 
 const Hero = () => {
-  const images = [1, 4, 11, 15, 17, 19, 24, 26, 29].map(
+  const images = [3, 6, 13, 17, 19, 21, 26, 28, 31].map(
     (num) => `/hero-bg/${num}.jpg`
   );
   const [currentIndex, setCurrentIndex] = useState(0);
