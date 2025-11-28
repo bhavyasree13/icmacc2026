@@ -1,4 +1,3 @@
-
 "use client";
 
 import { useRef, useEffect, useState } from "react";
@@ -181,8 +180,8 @@ export default function ConferenceScroll() {
         <Card animationType="fadeScale" delay={200}>
           <AnimatedText>
             <h2 className="text-3xl md:text-4xl font-serif font-bold mb-6 text-center bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 bg-clip-text text-transparent leading-tight">
-              Theme: Fusion of Deep and Emerging Technologies: Shaping the Future Frontiers of Innovation
-    
+              Theme: Fusion of Deep and Emerging Technologies: Shaping the
+              Future Frontiers of Innovation
             </h2>
           </AnimatedText>
           <AnimatedText delay={400}>
@@ -209,7 +208,7 @@ export default function ConferenceScroll() {
               discussions. The conference focuses on specific engineering
               streams, allowing the speakers to dwell deep into the very next
               day. The conference is technically co-sponsored by IEEE Hyderabad
-              Section and is approved by IEEE with conference ID: #62921.
+              Section and is approved by IEEE with conference ID: #69869.
             </p>
           </AnimatedText>
         </Card>

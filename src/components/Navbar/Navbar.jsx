@@ -11,9 +11,10 @@ const Navbar = () => {
   const navItems = [
     { name: "Home", hasDropdown: true },
     { name: "Hyderabad", hasDropdown: true },
-    { name: "Agenda", hasDropdown: true },
+    { name: "Call for Papers", hasDropdown: false },
+    // { name: "Agenda", hasDropdown: true },
     { name: "Committee", hasDropdown: true },
-    { name: "Inspiring Visionaries", hasDropdown: false },
+    // { name: "Inspiring Visionaries", hasDropdown: false },
     { name: "Sponsorship", hasDropdown: false },
     { name: "Acknowledgement", hasDropdown: false, link: "/acknowledgement" },
     { name: "ICMACC 2026", hasDropdown: true },
@@ -86,10 +87,10 @@ const Navbar = () => {
             {" "}
             {/* Keeps right logo aligned properly */}
             <Image
-              src="/logoright.png"
-              alt="Right Logo"
-              width={220}
-              height={80}
+              src="/hydsec.png"
+              alt="Hyderabad Section Logo"
+              width={120}
+              height={100}
               className="object-contain"
               priority
             />
@@ -138,8 +139,8 @@ const Navbar = () => {
             {/* Right Logo in Mobile Menu */}
             <div className="flex justify-center mt-4">
               <Image
-                src="/logoright.png"
-                alt="Right Logo"
+                src="/hydsec.png"
+                alt="Hyderabad Section Logo"
                 width={180}
                 height={60}
                 className="object-contain"
