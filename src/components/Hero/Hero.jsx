@@ -5,7 +5,9 @@ import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
 
 const Hero = () => {
-  const images = ["/b1.png", "/b2.png", "/b3.png"];
+  const images = [1, 4, 11, 15, 17, 19, 24, 26, 29].map(
+    (num) => `/hero-bg/${num}.jpg`
+  );
   const [currentIndex, setCurrentIndex] = useState(0);
   const [timeLeft, setTimeLeft] = useState({
     days: 0,
@@ -18,7 +20,7 @@ const Hero = () => {
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentIndex((prev) => (prev + 1) % images.length);
-    }, 3000);
+    }, 5000);
     return () => clearInterval(interval);
   }, [images.length]);
 
@@ -62,7 +64,7 @@ const Hero = () => {
             >
               <Image
                 src={images[currentIndex]}
-                alt="Conference Background"
+                alt={`Conference Background Image ${currentIndex + 1}`}
                 fill
                 className="object-cover"
                 priority
