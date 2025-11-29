@@ -9,49 +9,49 @@ const MOBILE_BREAKPOINT = 768;
 
 const tracks = [
   { 
-    label: "Circuits and Systems", 
+    label: "VLSI Circuits & System Design", 
     icon: <FaMicrochip />, 
     link: "https://example.com/circuits",
     description: "Advanced circuit design and system integration"
   },
   { 
-    label: "Robotics & Automation", 
+    label: "Robotics, Automation & Internet of Things", 
     icon: <FaRobot />, 
     link: "https://example.com/robotics",
     description: "Robotics, automation and IoT technologies"
   },
   { 
-    label: "Communications", 
+    label: "Communications, Sensors & Mobile Networking", 
     icon: <FaWifi />, 
     link: "https://example.com/communications",
     description: "Sensors, mobile networking and communications"
   },
   { 
-    label: "Signal Processing", 
+    label: "Signal, Image & Multimedia Processing", 
     icon: <FaImages />, 
     link: "https://example.com/signal",
     description: "Signal, image and multimedia processing"
   },
   { 
-    label: "AI & Computing", 
+    label: "Computational Intelligence & Computing", 
     icon: <FaBrain />, 
     link: "https://example.com/computing",
     description: "Computational intelligence and computing"
   },
   { 
-    label: "Data Science", 
+    label: "Data Science Engineering", 
     icon: <FaDatabase />, 
     link: "https://example.com/data-science",
     description: "Data science engineering and analytics"
   },
   { 
-    label: "Power Electronics", 
+    label: "Power, Energy & Power Electronics", 
     icon: <FaBolt />, 
     link: "https://example.com/power",
     description: "Power, energy and electronics systems"
   },
   { 
-    label: "Manufacturing", 
+    label: "Additive Manufacturing", 
     icon: <FaIndustry />, 
     link: "https://example.com/additive",
     description: "Advanced additive manufacturing"

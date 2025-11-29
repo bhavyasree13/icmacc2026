@@ -162,7 +162,7 @@ export default function ConferenceScroll() {
   }, []);
 
   return (
-    <div className="w-screen min-h-screen bg-gradient-to-br from-gray-50 via-blue-50/30 to-purple-50/30 font-sans relative">
+    <div className="w-full min-h-screen bg-gradient-to-br from-gray-50 via-blue-50/30 to-purple-50/30 font-sans relative">
       {/* Scroll progress indicator */}
       <div className="fixed top-0 left-0 w-full h-1 bg-gray-200/50 z-50">
         <div
