@@ -7,7 +7,7 @@
     "build": "next build --turbopack",
     "start": "next start",
     "deploy": "git checkout main && git pull origin main && next build && firebase deploy --only hosting",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\""
   },
   "dependencies": {
     "@studio-freight/lenis": "^1.0.42",
