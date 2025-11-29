@@ -2,7 +2,7 @@ import Hero from "@/components/Hero/Hero";
 import FlowingMenu from "@/components/FlowingMenu/FlowingMenu";
 import Sponsers from "@/components/Sponsers/Sponsers";
 import About from "@/components/About/About";
-import Tracks from "@/components/Tracks/Tracks";
+// import Tracks from "@/components/Tracks/Tracks";
 
 export default function Home() {
   return (
