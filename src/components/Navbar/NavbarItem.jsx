@@ -12,13 +12,13 @@ const NavDropdownItem = ({ href, children }) => {
     </Link>
   );
 };
-const NavbarItem = ({item})=>{
-  const hasDropdown = item.children && item.children.length>0;
+const NavbarItem = ({ item }) => {
+  const hasDropdown = item.children && item.children.length > 0;
   const [isOpen, setIsOpen] = useState(false);
   const dropdownRef = useRef(null);
 
   useEffect(() => {
-    if (!hasDropdown) return; 
+    if (!hasDropdown) return;
     const handleClickOutside = (event) => {
       if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
         setIsOpen(false);
@@ -34,8 +34,8 @@ const NavbarItem = ({item})=>{
         href={item.link}
         className="flex text-base items-center space-x-1 text-gray-700 hover:text-blue-600 font-medium transition-colors duration-300 px-2 py-2"
       >
-        <span className="relative after:content-[''] after:absolute after:left-0 after:bottom-[-4px] after:w-0 after:h-[2px] after:bg-blue-600 after:transition-all after:duration-300 hover:after:w-full"> 
-        {item.name}
+        <span className="relative after:content-[''] after:absolute after:left-0 after:bottom-[-4px] after:w-0 after:h-[2px] after:bg-blue-600 after:transition-all after:duration-300 hover:after:w-full">
+          {item.name}
         </span>
       </Link>
     );
@@ -45,7 +45,8 @@ const NavbarItem = ({item})=>{
     <div className="relative group inline-block" ref={dropdownRef}>
       <button
         onClick={() => setIsOpen((prev) => !prev)}
-        className="text-gray-700 hover:text-blue-600 py-2 rounded-md text-base font-medium inline-flex items-center transition-colors focus:outline-none">
+        className="text-gray-700 hover:text-blue-600 py-2 rounded-md text-base font-medium inline-flex items-center transition-colors focus:outline-none"
+      >
         {item.name}
         <ChevronDown
           className={`ml-1 mt-1 h-4 w-4 transition-transform ${
@@ -56,7 +57,7 @@ const NavbarItem = ({item})=>{
       {isOpen && (
         <div className="absolute z-10 mt-1 w-48 origin-top-right rounded-md bg-white py-1 shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
           {item.children.map((child) => (
-            <NavDropdownItem key={child.name} href={child.link}>
+            <NavDropdownItem key={child.name} href={child.link || ""}>
               {child.name}
             </NavDropdownItem>
           ))}
