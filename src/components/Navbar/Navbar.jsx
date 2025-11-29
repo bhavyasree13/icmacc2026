@@ -22,7 +22,14 @@ const Navbar = () => {
         { name: "Option 2", link: "/#option2" },
       ],
     },
-    { name: "Call for paper", link: "/callforpaper", children: [] },
+    {
+      name: "Author Toolkit",
+      children: [
+        { name: "Submit Paper", link: "/" },
+        { name: "Call for Papers", link: "/" },
+        { name: "Register", link: "/" },
+      ],
+    },
     // { name: "Agenda", hasDropdown: true },
     {
       name: "Committee",
