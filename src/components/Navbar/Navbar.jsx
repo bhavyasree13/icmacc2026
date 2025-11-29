@@ -33,7 +33,7 @@ const Navbar = () => {
     },
     // { name: "Inspiring Visionaries", hasDropdown: false },
     { name: "Sponsorship", link: "/sponsorship", children: [] },
-    { name: "Acknowledgment", link: "/acknowledgement", children: [] },
+    { name: "Acknowledgement", link: "/acknowledgement", children: [] },
     {
       name: "ICMACC",
       children: [
