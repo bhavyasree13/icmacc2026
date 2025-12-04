@@ -56,12 +56,6 @@ const tracks = [
     link: "https://example.com/additive",
     description: "Advanced additive manufacturing"
   },
-  { 
-    label: "Education Tech", 
-    icon: <FaBookOpen />, 
-    link: "https://example.com/education",
-    description: "Emerging educational technologies"
-  },
 ];
 
 const createParticleElement = (x, y, color = DEFAULT_GLOW_COLOR) => {
