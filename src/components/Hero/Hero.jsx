@@ -72,12 +72,12 @@ const Hero = () => {
               />
             </motion.div>
           </AnimatePresence>
-          <div className="absolute inset-0 bg-black bg-opacity-50"></div>
+          <div className="absolute inset-0 bg-black bg-opacity-20"></div>
         </div>
 
         {/* Centered Card */}
         <div className="relative z-10 flex items-center justify-center h-full px-4">
-          <div className="bg-black/20 backdrop-blur-lg rounded-2xl shadow-2xl border border-white/20 p-4 md:p-5 max-w-xl w-full text-center transition-all duration-300 hover:scale-[1.02]">
+          <div className="bg-black/30 backdrop-blur-[0.8px] rounded-2xl border border-white/20 p-4 md:p-5 max-w-xl w-full text-center transition-all duration-300 hover:scale-[1.04]">
             {/* Title */}
             <div className="mb-4">
               <h1 className="text-xl md:text-3xl font-bold leading-tight mb-1 text-white">
