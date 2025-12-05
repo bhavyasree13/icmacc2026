@@ -1,4 +1,7 @@
+
 "use client";
+link: "/callforpapers"
+
 
 import React, { useState } from "react";
 import Image from "next/image";
@@ -26,7 +29,7 @@ const Navbar = () => {
       name: "Author Toolkit",
       children: [
         { name: "Submit Paper", link: "/" },
-        { name: "Call for Papers", link: "/" },
+        { name: "Call for Papers", link: "/callforpapers" },
         { name: "Register", link: "/" },
       ],
     },
@@ -152,6 +155,7 @@ const Navbar = () => {
                             key={child.name}
                             href={child.link}
                             className="block text-gray-700 hover:text-blue-600 py-1"
+                            onClick={() => setIsMenuOpen(false)}
                           >
                             {child.name}
                           </Link>
@@ -163,6 +167,7 @@ const Navbar = () => {
                   <Link
                     href={item.link}
                     className="block text-gray-700 hover:text-blue-600 py-2 font-medium"
+                    onClick={() => setIsMenuOpen(false)}
                   >
                     {item.name}
                   </Link>
@@ -187,4 +192,4 @@ const Navbar = () => {
   );
 };
 
-export default Navbar;
+export default Navbar;

@@ -125,25 +125,42 @@ const AnimatedText = ({ children, delay = 0 }) => {
 
 // Floating particles background
 const FloatingParticles = () => {
+  const [particles, setParticles] = useState([]);
+
+  useEffect(() => {
+    const arr = [...Array(20)].map(() => ({
+      left: `${Math.random() * 100}%`,
+      top: `${Math.random() * 100}%`,
+      width: `${Math.random() * 6 + 2}px`,
+      height: `${Math.random() * 6 + 2}px`,
+      animationDelay: `${Math.random() * 3}s`,
+      animationDuration: `${Math.random() * 3 + 2}s`,
+    }));
+
+    setParticles(arr);
+  }, []);
+
   return (
     <div className="fixed inset-0 pointer-events-none overflow-hidden z-0">
-      {[...Array(20)].map((_, i) => (
+      {particles.map((p, i) => (
         <div
           key={i}
           className="absolute rounded-full bg-gradient-to-r from-blue-400/20 to-purple-400/20 animate-pulse"
           style={{
-            left: `${Math.random() * 100}%`,
-            top: `${Math.random() * 100}%`,
-            width: `${Math.random() * 6 + 2}px`,
-            height: `${Math.random() * 6 + 2}px`,
-            animationDelay: `${Math.random() * 3}s`,
-            animationDuration: `${Math.random() * 3 + 2}s`,
+            left: p.left,
+            top: p.top,
+            width: p.width,
+            height: p.height,
+            animationDelay: p.animationDelay,
+            animationDuration: p.animationDuration,
           }}
         />
       ))}
     </div>
   );
 };
+
+
 
 export default function ConferenceScroll() {
   const [scrollProgress, setScrollProgress] = useState(0);
